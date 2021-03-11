@@ -13,7 +13,7 @@ metadata:
   name: hostname
   namespace: staging
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: hostname
@@ -30,7 +30,7 @@ spec:
         version: v1
     spec:
       containers:
-      - image: rstarmer/hostname:v2
+      - image: rstarmer/hostname:v1
         imagePullPolicy: Always
         name: hostname
         resources: {}
